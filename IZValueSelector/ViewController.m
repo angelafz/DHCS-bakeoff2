@@ -14,6 +14,7 @@
 
 @implementation ViewController
 @synthesize selectorHorizontal = _selectorHorizontal;
+@synthesize vowels = _vowels;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +24,11 @@
     self.selectorHorizontal.delegate = self;
     self.selectorHorizontal.shouldBeTransparent = YES;
     self.selectorHorizontal.horizontalScrolling = YES;
+    
+    self.vowels.dataSource = self;
+    self.vowels.delegate = self;
+    self.vowels.shouldBeTransparent = YES;
+    self.vowels.horizontalScrolling = YES;
     
     //You can toggle Debug mode on selectors to see the layout
     self.selectorHorizontal.debugEnabled = NO;
@@ -40,7 +46,10 @@
 
 #pragma IZValueSelector dataSource
 - (NSInteger)numberOfRowsInSelector:(IZValueSelectorView *)valueSelector {
-    return 27;
+    if (valueSelector == self.selectorHorizontal) {
+        return 27;
+    }
+    return 6;
 }
 
 //ONLY ONE OF THESE WILL GET CALLED (DEPENDING ON the horizontalScrolling property Value)
@@ -62,6 +71,9 @@
     label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 70, self.selectorHorizontal.frame.size.height)];
     NSArray *alphabet = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M",
                           @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z", @" "];
+    if (valueSelector == self.vowels) {
+        alphabet = @[@"A", @"E", @"I", @"O", @"U", @"Y"];
+    }
     label.text = [alphabet objectAtIndex:index];
     label.textAlignment =  NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:50];
@@ -75,11 +87,6 @@
 }
 
 - (CGRect)rectForSelectionInSelector:(IZValueSelectorView *)valueSelector {
-    //Just return a rect in which you want the selector image to appear
-    //Use the IZValueSelector coordinates
-    //Basically the x will be 0
-    //y will be the origin of your image
-    //width and height will be the same as in your selector image
     return CGRectMake(self.selectorHorizontal.frame.size.width/2 - 35.0, 0.0, 70.0, 90.0);
 
 }

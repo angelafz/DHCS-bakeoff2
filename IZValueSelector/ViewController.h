@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController <IZValueSelectorViewDataSource,IZValueSelectorViewDelegate>
 
 @property (nonatomic,weak) IBOutlet IZValueSelectorView *selectorHorizontal;
+@property (nonatomic,weak) IBOutlet IZValueSelectorView *vowels;
 
 @end
