@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BBF9F5818ECB46500832E5B /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF9F5718ECB46500832E5B /* next.png */; };
+		0BBF9F5A18ECBA3400832E5B /* spacebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF9F5918ECBA3400832E5B /* spacebar.png */; };
+		0BBF9F5C18ECBA3900832E5B /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF9F5B18ECBA3900832E5B /* backspace.png */; };
 		0F483A6A1643E2FD003CAF09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F483A691643E2FD003CAF09 /* UIKit.framework */; };
 		0F483A6C1643E2FD003CAF09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F483A6B1643E2FD003CAF09 /* Foundation.framework */; };
 		0F483A6E1643E2FD003CAF09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F483A6D1643E2FD003CAF09 /* CoreGraphics.framework */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BBF9F5718ECB46500832E5B /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		0BBF9F5918ECBA3400832E5B /* spacebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spacebar.png; sourceTree = "<group>"; };
+		0BBF9F5B18ECBA3900832E5B /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
 		0F483A651643E2FD003CAF09 /* IZValueSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IZValueSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F483A691643E2FD003CAF09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F483A6B1643E2FD003CAF09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +116,9 @@
 		0F483A701643E2FD003CAF09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0BBF9F5918ECBA3400832E5B /* spacebar.png */,
+				0BBF9F5718ECB46500832E5B /* next.png */,
+				0BBF9F5B18ECBA3900832E5B /* backspace.png */,
 				0F483A711643E2FD003CAF09 /* IZValueSelector-Info.plist */,
 				0F483A721643E2FD003CAF09 /* InfoPlist.strings */,
 				0F483A751643E2FD003CAF09 /* main.m */,
@@ -181,8 +190,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBF9F5A18ECBA3400832E5B /* spacebar.png in Resources */,
 				0F483A741643E2FD003CAF09 /* InfoPlist.strings in Resources */,
 				0F483A7C1643E2FD003CAF09 /* Default.png in Resources */,
+				0BBF9F5C18ECBA3900832E5B /* backspace.png in Resources */,
+				0BBF9F5818ECB46500832E5B /* next.png in Resources */,
 				0F483A7E1643E2FD003CAF09 /* Default@2x.png in Resources */,
 				0F483A801643E2FD003CAF09 /* Default-568h@2x.png in Resources */,
 				0F483A831643E2FD003CAF09 /* MainStoryboard.storyboard in Resources */,
@@ -283,8 +295,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IZValueSelector/IZValueSelector-Prefix.pch";
 				INFOPLIST_FILE = "IZValueSelector/IZValueSelector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -295,8 +308,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IZValueSelector/IZValueSelector-Prefix.pch";
 				INFOPLIST_FILE = "IZValueSelector/IZValueSelector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="iLf-9i-PVT" customClass="IZValueSelectorView">
-                                <rect key="frame" x="15" y="276" width="285" height="90"/>
+                                <rect key="frame" x="73" y="246" width="58" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.84042119999999998" blue="0.50640893149999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -23,7 +23,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="s2h-q3-MOP" customClass="IZValueSelectorView">
-                                <rect key="frame" x="15" y="370" width="285" height="90"/>
+                                <rect key="frame" x="189" y="246" width="58" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.84042119999999998" blue="0.50640893149999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -31,12 +31,22 @@
                                     <outlet property="delegate" destination="2" id="qHt-F6-FNf"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" id="zvF-mm-AFX" customClass="IZValueSelectorView">
+                                <rect key="frame" x="131" y="246" width="58" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.84042119999999998" blue="0.50640893149999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="chy-xU-Rvc"/>
+                                    <outlet property="delegate" destination="2" id="1Jr-pp-qwe"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="selectorHorizontal" destination="iLf-9i-PVT" id="ZZ6-iP-JBF"/>
+                        <outlet property="alphabet1" destination="iLf-9i-PVT" id="C8z-ci-1db"/>
+                        <outlet property="alphabet2" destination="zvF-mm-AFX" id="mCJ-HI-fxG"/>
                         <outlet property="vowels" destination="s2h-q3-MOP" id="yIr-3A-P3r"/>
                     </connections>
                 </viewController>
@@ -45,6 +55,7 @@
             <point key="canvasLocation" x="594" y="332"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.94825047142760155" green="0.93735532407407407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

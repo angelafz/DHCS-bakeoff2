@@ -10,7 +10,15 @@
 #import "IZValueSelectorView.h"
 @interface ViewController : UIViewController <IZValueSelectorViewDataSource,IZValueSelectorViewDelegate>
 
-@property (nonatomic,weak) IBOutlet IZValueSelectorView *selectorHorizontal;
+@property (nonatomic,weak) IBOutlet IZValueSelectorView *alphabet1;
+@property (nonatomic,weak) IBOutlet IZValueSelectorView *alphabet2;
 @property (nonatomic,weak) IBOutlet IZValueSelectorView *vowels;
+
+@property (nonatomic, strong) NSArray *phrases;
+@property (nonatomic, strong) UILabel *phrase;
+@property (nonatomic, strong) UILabel *input;
+@property (nonatomic, strong) UIButton *nextButton;
+@property (nonatomic, strong) UIButton *spacebar;
+@property (nonatomic, strong) UIButton *backspace;
 
 @end
