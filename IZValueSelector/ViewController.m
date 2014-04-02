@@ -47,7 +47,7 @@
      forControlEvents:UIControlEventTouchDown];
     [self.nextButton setImage:[UIImage imageNamed:@"next.png"]
             forState: UIControlStateNormal];
-    self.nextButton.frame = CGRectMake(200, 80, 120, 80);
+    self.nextButton.frame = CGRectMake(200, 80, 111, 44.24);
     [self.view addSubview:self.nextButton];
     
     
@@ -58,7 +58,7 @@
               forControlEvents:UIControlEventTouchDown];
     [self.spacebar setImage:[UIImage imageNamed:@"spacebar.png"]
                      forState: UIControlStateNormal];
-    self.spacebar.frame = CGRectMake(70, 450, 90, 30);
+    self.spacebar.frame = CGRectMake(70, 480, 111, 44.25);
     [self.view addSubview:self.spacebar];
     
     
@@ -69,7 +69,7 @@
               forControlEvents:UIControlEventTouchDown];
     [self.backspace setImage:[UIImage imageNamed:@"backspace.png"]
                      forState: UIControlStateNormal];
-    self.backspace.frame = CGRectMake(150, 450, 90, 30);
+    self.backspace.frame = CGRectMake(180, 480, 111, 44.25);
     [self.view addSubview:self.backspace];
     
     self.phrases = @[@"my watch fell in the water", @"prevailing wind from the east", @"never too rich and never too thin", @"breathing is difficult", @"i can see the rings on saturn", @"physics and chemistry are hard", @"my bank account is overdrawn", @"elections bring out the best", @"we are having spaghetti", @"time to go shopping", @"a problem with the engine", @"elephants are afraid of mice", @"my favorite place to visit", @"three two one zero blast off", @"my favorite subject is psychology", @"circumstances are unacceptable", @"watch out for low flying objects", @"if at first you do not succeed", @"please provide your date of birth", @"we run the risk of failure", @"prayer in schools offends some", @"he is just like everyone else", @"great disturbance in the force", @"love means many things", @"you must be getting old", @"the world is a stage", @"can i skate with sister today", @"neither a borrower nor a lender be", @"one heck of a question", @"an excellent way to communicate", @"with each step forward", @"faster than a speeding bullet", @"wishful thinking is fine", @"nothing wrong with his style", @"arguing with the boss is futile", @"taking the train is usually faster", @"what goes up must come down", @"be persistent to win a strike", @"dhcs is the bestclassever",@"presidents drive expensive cars", @"the stock exchange dipped", @"why do you ask silly questions", @"that is a very nasty cut", @"what to do when the oil runs dry", @"learn to walk before you run", @"insurance is important for bad drivers", @"traveling to conferences is fun", @"do you get nervous when you speak", @"pumping helps if the roads are slippery", @"parking tickets can be challenged", @"apartments are too expensive", @"find a nearby parking spot", @"gun powder must be handled with care", @"just what the doctor ordered", @"professor harrison is evil", @"a rattle snake is very poisonous", @"weeping willows are found near water", @"i cannot believe i ate the whole thing", @"the biggest hamburger i have ever seen", @"gamblers eventually loose their shirts", @"exercise is good for the mind", @"irregular verbs are the hardest to learn", @"they might find your comment offensive", @"tell a lie and your nose will grow", @"an enlarged nose suggests you are a liar", @"lie detector tests never work", @"do not lie in court or else", @"most judges are very honest", @"only an idiot would lie in court", @"important news always seems to be late", @"please try to be home before midnight", @"if you come home late the doors are locked", @"dormitory doors are locked at midnight", @"staying up all night is a bad idea", @"motivational seminars make me sick", @"these bakeoffs are a lot of work", @"questioning the wisdom of the courts", @"rejection letters are discouraging", @"the first time he tried to swim", @"that referendum asked a silly question", @"a steep learning curve in riding a unicycle", @"a good stimulus deserves a good response", @"everybody looses in custody battles", @"put garbage in an abandoned mine", @"employee recruitment takes a lot of effort", @"experience is hard to come by", @"everyone wants to win the lottery", @"the picket line gives me the chills"];
