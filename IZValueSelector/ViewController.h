@@ -20,5 +20,8 @@
 @property (nonatomic, strong) UIButton *nextButton;
 @property (nonatomic, strong) UIButton *spacebar;
 @property (nonatomic, strong) UIButton *backspace;
+@property (nonatomic, strong) UIButton *alph1Button;
+@property (nonatomic, strong) UIButton *alph2Button;
+@property (nonatomic, strong) UIButton *vowelsButton;
 
 @end

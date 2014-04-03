@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B4C412A18ED04E800A4EE35 /* enter.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B4C412918ED04E800A4EE35 /* enter.gif */; };
 		0BBF9F5818ECB46500832E5B /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF9F5718ECB46500832E5B /* next.png */; };
 		0BBF9F5A18ECBA3400832E5B /* spacebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF9F5918ECBA3400832E5B /* spacebar.png */; };
 		0BBF9F5C18ECBA3900832E5B /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF9F5B18ECBA3900832E5B /* backspace.png */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B4C412918ED04E800A4EE35 /* enter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = enter.gif; sourceTree = "<group>"; };
 		0BBF9F5718ECB46500832E5B /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		0BBF9F5918ECBA3400832E5B /* spacebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spacebar.png; sourceTree = "<group>"; };
 		0BBF9F5B18ECBA3900832E5B /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		0F483A701643E2FD003CAF09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B4C412918ED04E800A4EE35 /* enter.gif */,
 				0BBF9F5918ECBA3400832E5B /* spacebar.png */,
 				0BBF9F5718ECB46500832E5B /* next.png */,
 				0BBF9F5B18ECBA3900832E5B /* backspace.png */,
@@ -195,6 +198,7 @@
 				0F483A7C1643E2FD003CAF09 /* Default.png in Resources */,
 				0BBF9F5C18ECBA3900832E5B /* backspace.png in Resources */,
 				0BBF9F5818ECB46500832E5B /* next.png in Resources */,
+				0B4C412A18ED04E800A4EE35 /* enter.gif in Resources */,
 				0F483A7E1643E2FD003CAF09 /* Default@2x.png in Resources */,
 				0F483A801643E2FD003CAF09 /* Default-568h@2x.png in Resources */,
 				0F483A831643E2FD003CAF09 /* MainStoryboard.storyboard in Resources */,

@@ -12,6 +12,7 @@
 {
     int pIndex;
     int errorsTotal;
+    int tempIndex;
 }
 @end
 
@@ -51,7 +52,7 @@
     [self.view addSubview:self.nextButton];
     
     
-    //SPACEBAR
+    // SPACEBAR
     self.spacebar = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.spacebar addTarget:self
                         action:@selector(space)
@@ -62,7 +63,7 @@
     [self.view addSubview:self.spacebar];
     
     
-    //BAKSPACE
+    // BACKSPACE
     self.backspace = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.backspace addTarget:self
                         action:@selector(delete)
@@ -71,6 +72,36 @@
                      forState: UIControlStateNormal];
     self.backspace.frame = CGRectMake(180, 480, 111, 44.25);
     [self.view addSubview:self.backspace];
+    
+    // KEYBOARD 1 ENTER
+    self.alph1Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.alph1Button addTarget:self
+                       action:@selector(alph1Enter)
+             forControlEvents:UIControlEventTouchDown];
+    [self.alph1Button setImage:[UIImage imageNamed:@"enter.gif"]
+                    forState: UIControlStateNormal];
+    self.alph1Button.frame = CGRectMake(70, 300, 56, 30);
+    [self.view addSubview:self.alph1Button];
+    
+    // KEYBOARD 2 ENTER
+    self.alph2Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.alph2Button addTarget:self
+                         action:@selector(alph2Enter)
+               forControlEvents:UIControlEventTouchDown];
+    [self.alph2Button setImage:[UIImage imageNamed:@"enter.gif"]
+                      forState: UIControlStateNormal];
+    self.alph2Button.frame = CGRectMake(126, 300, 56, 30);
+    [self.view addSubview:self.alph2Button];
+    
+    // VOWEL KEYBOARD ENTER
+    self.vowelsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.vowelsButton addTarget:self
+                         action:@selector(vowelsEnter)
+               forControlEvents:UIControlEventTouchDown];
+    [self.vowelsButton setImage:[UIImage imageNamed:@"enter.gif"]
+                      forState: UIControlStateNormal];
+    self.vowelsButton.frame = CGRectMake(182, 300, 56, 30);
+    [self.view addSubview:self.vowelsButton];
     
     self.phrases = @[@"my watch fell in the water", @"prevailing wind from the east", @"never too rich and never too thin", @"breathing is difficult", @"i can see the rings on saturn", @"physics and chemistry are hard", @"my bank account is overdrawn", @"elections bring out the best", @"we are having spaghetti", @"time to go shopping", @"a problem with the engine", @"elephants are afraid of mice", @"my favorite place to visit", @"three two one zero blast off", @"my favorite subject is psychology", @"circumstances are unacceptable", @"watch out for low flying objects", @"if at first you do not succeed", @"please provide your date of birth", @"we run the risk of failure", @"prayer in schools offends some", @"he is just like everyone else", @"great disturbance in the force", @"love means many things", @"you must be getting old", @"the world is a stage", @"can i skate with sister today", @"neither a borrower nor a lender be", @"one heck of a question", @"an excellent way to communicate", @"with each step forward", @"faster than a speeding bullet", @"wishful thinking is fine", @"nothing wrong with his style", @"arguing with the boss is futile", @"taking the train is usually faster", @"what goes up must come down", @"be persistent to win a strike", @"dhcs is the bestclassever",@"presidents drive expensive cars", @"the stock exchange dipped", @"why do you ask silly questions", @"that is a very nasty cut", @"what to do when the oil runs dry", @"learn to walk before you run", @"insurance is important for bad drivers", @"traveling to conferences is fun", @"do you get nervous when you speak", @"pumping helps if the roads are slippery", @"parking tickets can be challenged", @"apartments are too expensive", @"find a nearby parking spot", @"gun powder must be handled with care", @"just what the doctor ordered", @"professor harrison is evil", @"a rattle snake is very poisonous", @"weeping willows are found near water", @"i cannot believe i ate the whole thing", @"the biggest hamburger i have ever seen", @"gamblers eventually loose their shirts", @"exercise is good for the mind", @"irregular verbs are the hardest to learn", @"they might find your comment offensive", @"tell a lie and your nose will grow", @"an enlarged nose suggests you are a liar", @"lie detector tests never work", @"do not lie in court or else", @"most judges are very honest", @"only an idiot would lie in court", @"important news always seems to be late", @"please try to be home before midnight", @"if you come home late the doors are locked", @"dormitory doors are locked at midnight", @"staying up all night is a bad idea", @"motivational seminars make me sick", @"these bakeoffs are a lot of work", @"questioning the wisdom of the courts", @"rejection letters are discouraging", @"the first time he tried to swim", @"that referendum asked a silly question", @"a steep learning curve in riding a unicycle", @"a good stimulus deserves a good response", @"everybody looses in custody battles", @"put garbage in an abandoned mine", @"employee recruitment takes a lot of effort", @"experience is hard to come by", @"everyone wants to win the lottery", @"the picket line gives me the chills"];
     
@@ -91,6 +122,7 @@
     [self.view addSubview:self.input];
     
     errorsTotal = 0;
+    tempIndex = 0;
 
 }
 
@@ -102,8 +134,6 @@
     int len = [self.phrases count];
     pIndex = (pIndex + 1)%len;
     self.phrase.text = [@"Phrase: " stringByAppendingString:[self.phrases objectAtIndex:pIndex]];
-    
-    //TODO: COMPUTE ACCURACY WITH LEVENSHTEIN DISTANCE
 
     self.input.text = @"Input: ";
 }
@@ -116,6 +146,26 @@
 - (void)space
 {
      self.input.text = [self.input.text stringByAppendingString:@" "];
+}
+
+- (void)alph1Enter
+{
+    NSArray *alphabet = @[@"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j", @"k", @"l", @"m",
+                          @"n", @"o", @"p", @"q", @"r", @"s", @"t", @"u", @"v", @"w", @"x", @"y", @"z"];
+    self.input.text = [self.input.text stringByAppendingString:[alphabet objectAtIndex:(tempIndex % [alphabet count])]];
+}
+
+- (void)alph2Enter
+{
+    NSArray *alphabet = @[@"t", @"u", @"v", @"w", @"x", @"y", @"z", @"a", @"b", @"c", @"d", @"e", @"f",
+                          @"g", @"h", @"i", @"j", @"k", @"l", @"m", @"n", @"o", @"p", @"q", @"r", @"s"];
+    self.input.text = [self.input.text stringByAppendingString:[alphabet objectAtIndex:(tempIndex % [alphabet count])]];
+}
+
+- (void)vowelsEnter
+{
+    NSArray *alphabet = @[@"a", @"e", @"i", @"o", @"u", @"y"];
+    self.input.text = [self.input.text stringByAppendingString:[alphabet objectAtIndex:(tempIndex % [alphabet count])]];
 }
 
 - (NSInteger) computeLevenshteinDistanceBetween:(NSString *) stringA and:(NSString *) stringB
@@ -191,12 +241,13 @@
     UILabel * label = nil;
     label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.alphabet1.frame.size.width, 20)];
     NSArray *alphabet = @[@"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j", @"k", @"l", @"m",
-                          @"n", @"O", @"p", @"q", @"r", @"s", @"t", @"u", @"v", @"w", @"x", @"y", @"z"];
+                          @"n", @"o", @"p", @"q", @"r", @"s", @"t", @"u", @"v", @"w", @"x", @"y", @"z"];
     if (valueSelector == self.vowels) {
         alphabet = @[@"a", @"e", @"i", @"o", @"u", @"y"];
     }
     if (valueSelector == self.alphabet2) {
-        index += 19;
+        alphabet = @[@"t", @"u", @"v", @"w", @"x", @"y", @"z", @"a", @"b", @"c", @"d", @"e", @"f",
+                     @"g", @"h", @"i", @"j", @"k", @"l", @"m", @"n", @"o", @"p", @"q", @"r", @"s"];
     }
     label.text = [alphabet objectAtIndex:(index%26)];
     label.textAlignment =  NSTextAlignmentCenter;
@@ -217,16 +268,8 @@
 
 #pragma IZValueSelector delegate
 - (void)selector:(IZValueSelectorView *)valueSelector didSelectRowAtIndex:(NSInteger)index {
-    NSLog(@"Selected index %d",index);
-    NSArray *alphabet = @[@"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j", @"k", @"l", @"m",
-                          @"n", @"O", @"p", @"q", @"r", @"s", @"t", @"u", @"v", @"w", @"x", @"y", @"z"];
-    if (valueSelector == self.vowels) {
-        alphabet = @[@"a", @"e", @"i", @"o", @"u", @"y"];
-    }
-    if (valueSelector == self.alphabet2) {
-        index += 19;
-    }
-    self.input.text = [self.input.text stringByAppendingString:[alphabet objectAtIndex:(index % [alphabet count])]];
+    //NSLog(@"Selected index %d",index);
+    tempIndex = index;
 }
 
 
