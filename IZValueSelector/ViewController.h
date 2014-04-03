@@ -18,10 +18,13 @@
 @property (nonatomic, strong) UILabel *phrase;
 @property (nonatomic, strong) UILabel *input;
 @property (nonatomic, strong) UIButton *nextButton;
+@property (nonatomic, strong) UIButton *restartButton;
 @property (nonatomic, strong) UIButton *spacebar;
 @property (nonatomic, strong) UIButton *backspace;
 @property (nonatomic, strong) UIButton *alph1Button;
 @property (nonatomic, strong) UIButton *alph2Button;
 @property (nonatomic, strong) UIButton *vowelsButton;
+@property (nonatomic, strong) UILabel *timeTaken;
+@property (nonatomic, strong) UILabel *totalLetters;
 
 @end
